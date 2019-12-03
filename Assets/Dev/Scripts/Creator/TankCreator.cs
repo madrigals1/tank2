@@ -20,8 +20,7 @@ public class TankCreator : MonoBehaviour {
 		{0,0,0,0,1,0,0,0,0,0,0,0,0}
 	};
 
-	public GameObject player;
-	public GameObject enemy;
+	public GameObject player, enemy;
 
 	void Start () {
 		for(int i = 0; i < 13; i++){
@@ -30,11 +29,13 @@ public class TankCreator : MonoBehaviour {
 					GameObject ins = Instantiate(player, gameObject.transform) as GameObject;
 					ins.transform.localPosition = new Vector3(j,0,-i);
 					ins.gameObject.name = "Player";
+					ins.GetComponent<Player>().Spawn(0);
 				}
 				if(level[i,j] == 2){
 					GameObject ins = Instantiate(enemy, gameObject.transform) as GameObject;
 					ins.transform.localPosition = new Vector3(j,0,-i);
 					ins.gameObject.name = "Enemy";
+					ins.GetComponent<Enemy>().Spawn(0);
 				}
 			}
 		}
