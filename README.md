@@ -4,7 +4,7 @@ Tank clone project made in Unity
 
 ## Prerequisites
 
-- **Unity 2020** - Unity is a cross-platform game engine.
+- **Unity 2019** - Unity is a cross-platform game engine.
 
 
 ## GamePlay
