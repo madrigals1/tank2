@@ -12,16 +12,18 @@ public class Main : MonoBehaviour
         Values.tankHolder = GameObject.Find("Tanks").transform;
         Values.explosionHolder = GameObject.Find("Explosions").transform;
         Values.blockHolder = GameObject.Find("Blocks").transform;
-        for(int i = 0; i < 5; i++){
-            Values.Brick.Brown.textures[i] = Resources.Load("Textures/Bricks/brick_brown_" + ((i + 1) * Values.Brick.Brown.hpstep),typeof(Texture)) as Texture;
-            Values.Brick.Steel.textures[i] = Resources.Load("Textures/Bricks/brick_steel_" + ((i + 1) * Values.Brick.Steel.hpstep),typeof(Texture)) as Texture;
+        for (int i = 0; i < 5; i++)
+        {
+            Values.Brick.Brown.textures[i] = Resources.Load("Textures/Bricks/brick_brown_" + ((i + 1) * Values.Brick.Brown.hpstep), typeof(Texture)) as Texture;
+            Values.Brick.Steel.textures[i] = Resources.Load("Textures/Bricks/brick_steel_" + ((i + 1) * Values.Brick.Steel.hpstep), typeof(Texture)) as Texture;
         }
         Values.Trees.textures = Resources.LoadAll("Textures/Trees", typeof(Texture));
         SetCollisionIgnore();
         SpawnLevel();
     }
 
-    void SetCollisionIgnore(){
+    void SetCollisionIgnore()
+    {
         /*
             Layer 0 : Default
             Layer 1 : TransparetnFX
@@ -50,32 +52,39 @@ public class Main : MonoBehaviour
         Physics.IgnoreLayerCollision(12, 4);
     }
 
-    void SpawnLevel(){
-        for(int i = 0; i < 13; i++){
-			for(int j = 0; j < 13; j++){
-				if(Values.level[level,i,j] == 1){
-					GameObject ins = Instantiate(brown_brick, Values.blockHolder) as GameObject;
-					ins.transform.localPosition = new Vector3(j,0,-i);
-					ins.gameObject.name = "Brown Brick";
-					ins.GetComponent<Brick>().Spawn(0);
-				}
-				if(Values.level[level,i,j] == 2){
-					GameObject ins = Instantiate(water, Values.blockHolder) as GameObject;
-					ins.transform.localPosition = new Vector3(j,0,-i);
-					ins.gameObject.name = "Water";
-				}
-				if(Values.level[level,i,j] == 3){
-					GameObject ins = Instantiate(steel_brick, Values.blockHolder) as GameObject;
-					ins.transform.localPosition = new Vector3(j,0,-i);
-					ins.gameObject.name = "Steel Brick";
-					ins.GetComponent<Brick>().Spawn(1);
-				}
-				if(Values.level[level,i,j] == 4){
-					GameObject ins = Instantiate(tree, Values.blockHolder) as GameObject;
-					ins.transform.localPosition = new Vector3(j,0.5f,-i);
-					ins.gameObject.name = "Tree";
-				}
-			}
-		}
+    void SpawnLevel()
+    {
+        for (int i = 0; i < 13; i++)
+        {
+            for (int j = 0; j < 13; j++)
+            {
+                if (Values.level[level, i, j] == 1)
+                {
+                    GameObject ins = Instantiate(brown_brick, Values.blockHolder) as GameObject;
+                    ins.transform.localPosition = new Vector3(j, 0, -i);
+                    ins.gameObject.name = "Brown Brick";
+                    ins.GetComponent<Brick>().Spawn(0);
+                }
+                if (Values.level[level, i, j] == 2)
+                {
+                    GameObject ins = Instantiate(water, Values.blockHolder) as GameObject;
+                    ins.transform.localPosition = new Vector3(j, 0, -i);
+                    ins.gameObject.name = "Water";
+                }
+                if (Values.level[level, i, j] == 3)
+                {
+                    GameObject ins = Instantiate(steel_brick, Values.blockHolder) as GameObject;
+                    ins.transform.localPosition = new Vector3(j, 0, -i);
+                    ins.gameObject.name = "Steel Brick";
+                    ins.GetComponent<Brick>().Spawn(1);
+                }
+                if (Values.level[level, i, j] == 4)
+                {
+                    GameObject ins = Instantiate(tree, Values.blockHolder) as GameObject;
+                    ins.transform.localPosition = new Vector3(j, 0.5f, -i);
+                    ins.gameObject.name = "Tree";
+                }
+            }
+        }
     }
 }

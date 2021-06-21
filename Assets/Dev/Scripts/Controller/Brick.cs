@@ -23,7 +23,7 @@ public class Brick : MonoBehaviour {
 		}
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if (hpChanged) {
 			if(hp <= 0) {
 				Destroy(gameObject);

@@ -5,12 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Wall
-  - Bullet
-  - Enemy
   - Brick
+  - IgnoreCollision
+  - Bullet
   - IgnoreCollisionTanks
   - IgnoreCollisionBullets
-  - IgnoreCollision
+  - Enemy
   layers:
   - Default
   - TransparentFX

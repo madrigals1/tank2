@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4941016801326624}
   - component: {fileID: 33960603378968168}
   - component: {fileID: 23028751475192684}
-  - component: {fileID: 64337526467966092}
   - component: {fileID: 54422661818080484}
   - component: {fileID: 1714045259950572198}
+  - component: {fileID: 4958810673053435123}
   m_Layer: 12
   m_Name: Enemy Strong Bullet
   m_TagString: Bullet
@@ -58,6 +58,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -69,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -81,20 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64337526467966092
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048764925538044}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &54422661818080484
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -127,6 +117,20 @@ MonoBehaviour:
   type: 0
   bulletExplosion: {fileID: 4671073445927044443, guid: 03fa7eb30a601a6478eea42e2df54b08,
     type: 3}
+  brownExplosion: {fileID: 0}
+--- !u!65 &4958810673053435123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1048764925538044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1.0000002, z: 6.123235e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1406434562137086
 GameObject:
   m_ObjectHideFlags: 0

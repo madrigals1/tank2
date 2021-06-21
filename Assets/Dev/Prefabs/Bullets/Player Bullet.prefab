@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 4348676457496602}
   - component: {fileID: 33915367415502420}
   - component: {fileID: 23563829871998362}
-  - component: {fileID: 64092100331152224}
   - component: {fileID: 54254011233569352}
   - component: {fileID: 5881571334701574946}
+  - component: {fileID: 6418731165049829621}
   m_Layer: 11
   m_Name: Player Bullet
   m_TagString: Bullet
@@ -58,6 +58,8 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -69,6 +71,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -81,20 +84,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &64092100331152224
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1143500152807864}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!54 &54254011233569352
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -129,6 +119,19 @@ MonoBehaviour:
     type: 3}
   brownExplosion: {fileID: 8720920099049776041, guid: 2334c772db18cc64ea6e412d19299f6a,
     type: 3}
+--- !u!65 &6418731165049829621
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143500152807864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1.0000002, z: 6.123235e-17}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1593075836454982
 GameObject:
   m_ObjectHideFlags: 0
