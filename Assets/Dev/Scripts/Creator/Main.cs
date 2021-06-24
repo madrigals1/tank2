@@ -14,8 +14,15 @@ public class Main : MonoBehaviour
         Values.blockHolder = GameObject.Find("Blocks").transform;
         for (int i = 0; i < 5; i++)
         {
-            Values.Brick.Brown.textures[i] = Resources.Load("Textures/Bricks/brick_brown_" + ((i + 1) * Values.Brick.Brown.hpstep), typeof(Texture)) as Texture;
-            Values.Brick.Steel.textures[i] = Resources.Load("Textures/Bricks/brick_steel_" + ((i + 1) * Values.Brick.Steel.hpstep), typeof(Texture)) as Texture;
+            Values.Brick.Brown.textures[i] = Resources.Load(
+                "Textures/Bricks/red_" + ((i + 1) * Values.Brick.Brown.hpstep),
+                typeof(Texture)
+            ) as Texture;
+
+            Values.Brick.Steel.textures[i] = Resources.Load(
+                "Textures/Bricks/silver_" + ((i + 1) * Values.Brick.Steel.hpstep),
+                typeof(Texture)
+            ) as Texture;
         }
         Values.Trees.textures = Resources.LoadAll("Textures/Trees", typeof(Texture));
         SetCollisionIgnore();

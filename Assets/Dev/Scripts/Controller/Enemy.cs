@@ -5,7 +5,6 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
 
-
     CharacterController cc;
 
     public Bullet strongBullet;
@@ -73,8 +72,8 @@ public class Enemy : MonoBehaviour
 
     void TimeUpdater()
     {
-        shootTimeDelta += Time.fixedDeltaTime;
-        dirTimeDelta += Time.fixedDeltaTime;
+        shootTimeDelta += Time.deltaTime;
+        dirTimeDelta += Time.deltaTime;
     }
 
     void ShootAndRotate()
