@@ -13,7 +13,7 @@ Tank clone project made in Unity
 
 ## GamePlay
 
-![GamePlay](https://i.imgur.com/FLkXoo5.png "GamePlay")
+![GamePlay](https://i.imgur.com/vu6Bd4S.png "GamePlay")
 
 
 ## Installation
